@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:id="@+id/searchView">
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            app:iconifiedByDefault="false"
+            android:layout_height="?attr/actionBarSize"
+            app:defaultQueryHint="Search wallpaper"
+            android:id="@+id/serach"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_main"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchView">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:weightSum="2"
+    android:layout_margin="5dp"
+    android:textAllCaps="false"
+    android:textSize="18sp"
+    android:layout_height="55dp"
+    android:layout_alignParentBottom="true">
+
+    <Button
+        android:id="@+id/previous_btn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="2.5dp"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:elevation="10dp"
+        android:backgroundTint="#FFFEFE"
+        android:text="Previous"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="Next"
+        android:id="@+id/next_btn"
+        android:textColor="@color/black"
+        android:elevation="10dp"
+        android:textAllCaps="false"
+        android:backgroundTint="#FFFEFE"
+        android:textSize="18sp"
+        android:background="@drawable/button"
+        android:layout_margin="2.5dp"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>
+</RelativeLayout>
